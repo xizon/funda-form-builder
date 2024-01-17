@@ -1,0 +1,211 @@
+
+/*================================================================
+////////////////////////    (Optional)    ////////////////////////
+
+the CORE PROGRAM already contains these styles
+If you import it, it is to check out some styles of the CORE PROGRAM during separate testing
+================================================================*/
+
+
+/* ---------- Page Wrapper ----------- */
+.app-wrapper {
+    --bs-gutter-x: 1.5rem;
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+
+/* ---------- Generic ----------- */
+kbd {
+    --base-size-12: 0.75rem;
+    --base-size-16: 1rem;
+    --text-caption-size: 0.75rem;
+    --text-caption-lineHeight: calc(16/12);
+    --borderWidth-thin: max(1px, 0.0625rem);
+    --color-fg-subtle: #6e7781;
+    --color-fg-transparent: transparent;
+    --borderRadius-small: 3px;
+    --borderRadius-medium: 6px;
+    --borderRadius-large: 12px;
+    --borderRadius-full: 100vh;
+
+
+    display: inline-grid;
+    width: auto;
+    height: var(--base-size-16, 16px);
+    padding: 0;
+    font-size: var(--text-caption-size, 12px);
+    line-height: var(--text-caption-lineHeight, 1.3333333333);
+    color: inherit;
+    vertical-align: baseline;
+    background: transparent;
+    border: var(--borderWidth-thin, 1px) solid var(--color-fg-subtle);
+    border-radius: var(--borderRadius-small, 3px);
+    box-shadow: none;
+    align-items: center;
+    justify-content: center; 
+    
+
+    &.app-kbd--primary-btn {
+        border-color: var(--color-fg-transparent);   
+    }
+}
+
+/* ---------- Card Style ----------- */
+.app-main-layout > .card {
+    --app-card-title-color: #777;
+    --app-shadow: 0 5px 15px 5px rgba(80, 102, 224, 0.08);
+    --app-card-cap-padding-y: 1rem;
+    --app-card-cap-padding-x: 0.875rem;
+    --app-card-header-footer-bg: #fafcff;
+    --app-card-border-color: rgba(0, 0, 0, 0.05);
+     
+
+    position: relative;
+    margin-block-end: 1.5rem;
+    width: 100%;
+    box-shadow: var(--app-shadow);
+    border: inherit;
+
+    .row {
+        /* Horizontally aligned form text is centered */
+        .text-end:not(.text-end--for-radio-checkbox) {
+            padding-top: .4em;  
+        }
+    }
+
+    .card-header,
+    .card-footer {
+        padding: var(--app-card-cap-padding-y) var(--app-card-cap-padding-x);
+        border-color: var(--app-card-border-color);
+        background-color: var(--app-card-header-footer-bg);
+    }
+
+    /* title */
+    .card-body {
+        .text-end {
+            color: var(--app-card-title-color);
+        }
+    }
+
+}
+
+.app-tabs-module__wrapper {
+
+    .card {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .dynamic-fields__append {
+        .dynamic-fields__tmpl__wrapper:not(:first-child) .card{
+            border-top-left-radius: var(--bs-card-border-radius, 0.375rem);
+            border-top-right-radius: var(--bs-card-border-radius, 0.375rem);
+        }
+    }
+}
+
+/* ---------- Boundary Indication  ----------- */
+.app-process-back-icon {
+    height: 24px;
+    margin: 10px 0 -24px;
+    min-width: 24px;
+    padding: 0 3px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    margin-right: -15px;
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom,#f5f5f5,#f1f1f1);
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 2px;
+    box-shadow: none;
+    box-sizing: content-box;
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    transition: all .218s;
+    white-space: nowrap;
+    vertical-align: middle;
+    z-index: 1;
+
+    &.signal {
+        pointer-events: none;
+    }
+
+    &.reverse {
+        transform: scaleX(-1);
+    }
+
+    &:hover {
+        background: #fff;
+    }
+}
+
+
+/* ---------- Waiting state for button  ----------- */
+
+.app-button-state--waiting {
+    background-image: linear-gradient(-45deg,rgba(0,0,0,.15) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.15) 50%,rgba(0,0,0,.15) 75%,transparent 75%,transparent) !important;
+    background-size: 30px 30px !important;
+    animation: cssAnim--moveWaitingStripes 0.5s linear infinite !important;
+    cursor: wait !important;
+    pointer-events: none !important;
+
+}
+
+@keyframes cssAnim--moveWaitingStripes {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 30px 0px;
+    }
+}
+
+
+/* ---------- Tree  ----------- */
+.app-tree-mainlist-autoheight {
+    max-height: calc(100vh - 4.875rem - 3.875rem);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+.app-tree-mainlist-autoheight--hasjs-scroll {
+    max-height: calc(100vh - 4.875rem - 3.875rem);
+}
+
+
+
+/* ---------- Table Div  ----------- */
+
+.app-div-table {
+    .app-div-table__body {
+        display: table-row-group;
+
+        &.last .border {
+            border-bottom-width: 1px !important;
+        }
+    }
+
+    .border {
+        border-bottom-width: 0 !important;
+        border-right-width: 0 !important;
+    
+        &.last {
+            border-right-width: 1px !important;
+        }
+    }
+
+}
+
+	

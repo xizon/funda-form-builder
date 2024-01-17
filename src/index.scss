@@ -1,0 +1,32 @@
+@import './styles/core';
+
+
+/* ---------- Tailwind  ----------- */
+/* DO NOT USE `@tailwind base;` */
+@tailwind components;
+@tailwind utilities;
+
+
+/* ---------- DragDrop  ----------- */
+@import './styles/dragdrop';
+
+
+
+/* ---------- Navigation Blocks  ----------- */
+
+.app-navblocks--content {
+    .active {
+        i {
+            color: #fff !important;
+            opacity: .4;
+        }
+    }
+
+    .tree-diagram__wrapper {
+        i {
+            color: inherit !important;
+            opacity: 1;
+        }
+    }
+}
+

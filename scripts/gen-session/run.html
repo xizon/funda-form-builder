@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <div id="overview" style="padding: 1rem; background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1); margin: 5px; border-radius: 5px; color: #fff;"></div>
+    <div style="padding: .5rem;"> You can close the terminal with <code style="color: red; ">Ctrl + C</code> </div>
+    <script>
+
+        window.addEventListener("load", (event) => {
+
+            const resDiv = document.getElementById('overview');
+            const queryString = window.location.search;
+            const PARAMS = new URLSearchParams(queryString);
+            const values = PARAMS.get('u').split('-----');
+            console.log(values);
+
+            // gRPC Services API
+            const _AuthService = typeof window !== 'undefined' && typeof window['API'] !== 'undefined' ? window['API']['AuthService'] : {};
+            const AuthService = _AuthService.AuthService;
+
+            AuthService.login({
+                user_name: values[0],
+                user_password: values[1]
+            }).then(function (response) {
+                resDiv.innerHTML = 'login response: '+ response;
+
+                /*
+                 ////////////////////////////////////////////////////////////
+                 ///////////////   (1) Network or API error   ///////////////
+                 ////////////////////////////////////////////////////////////
+                 */
+                if (typeof response === typeof undefined) {
+                    resDiv.innerHTML = 'ERROR: Unknown!';
+                    return false;
+                }
+
+                /*
+                 ////////////////////////////////////////////////////////////
+                 ////////////////   (2) Login successful   //////////////////
+                 ////////////////////////////////////////////////////////////
+                 */
+
+                // This is where you would call Firebase, an API etc...
+                if (response && response.code === 0) {
+                    resDiv.innerHTML = 'Login successful!';
+                    // Save user from local storage
+                    localStorage.setItem('SITE_DATA_AUTH', JSON.stringify({
+                        token: response.session_id
+                    }));
+                    return false;
+
+
+                }
+
+                /*
+                 ////////////////////////////////////////////////////////////
+                 ////////////////   (3) Login failed       //////////////////
+                 ////////////////////////////////////////////////////////////
+                 */
+                if (response && response.code !== 0) {
+                    resDiv.innerHTML = 'ERROR: ' + response.code + ': ' + response.message + '!';
+                    return false;
+                }
+                
+
+            });
+
+
+
+        });
+
+
+    </script>
+
+    <script src="http://localhost:4002/api-main.js"></script>
+</body>
+
+</html>
