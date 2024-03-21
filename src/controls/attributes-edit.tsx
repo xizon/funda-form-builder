@@ -49,7 +49,7 @@ const fieldsAttributesEdit = (
 
 
     }
-
+    
     return formdata === null ? editPanel.outComponent() : editPanel.callbackFieldsName;
 
 };
