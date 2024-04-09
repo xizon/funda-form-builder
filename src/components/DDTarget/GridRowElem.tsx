@@ -91,7 +91,7 @@ export default function GridRowElem(props: DropTargetItemProps) {
         <>
             {sortableData.map((item: any, i: number) => (
                 <DDHandleGridRow
-                    key={item.id + i}  // DO NOT ONLY USE `id`
+                    key={item.id + i}  // DO NOT ONLY USE `i` or `item.id `
                     itemType={ItemTypes.GRID_ROW}
                     id={item.id}
                     ratio={item.ratio}
