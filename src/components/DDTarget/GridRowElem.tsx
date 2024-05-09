@@ -53,7 +53,13 @@ export default function GridRowElem(props: DropTargetItemProps) {
                 [hoverIndex, 0, (allData as any)[dragIndex]],
             ],
         });
-        updateSortableDataStore(_sortableData);
+
+
+        // Prevent unexpected errors with elements after dragging across regions
+        // Clear the "undefined" elements in the array
+        const _sortableDataClean = _sortableData.filter(Boolean);
+
+        updateSortableDataStore(_sortableDataClean);
 
     }, []);
 
