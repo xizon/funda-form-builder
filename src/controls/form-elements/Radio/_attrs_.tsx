@@ -3,12 +3,36 @@
  */
 
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { asyncSave, asyncSaveTriggerForFields, asyncSaveTriggerHandle } from '../../../components/ElementsEdit/func/asyncFormHelpers';
 
 // bootstrap components
 import Input from 'funda-ui/Input';
 import Radio from 'funda-ui/Radio';
+
+// DO NOT move `useMemo` to component
+// !!! Prevent the "input associated with the component" from being restored when "useState()" is changed
+function HideInputMemo(props: any) {
+    const { saveFunc, value, id, name } = props;
+    return useMemo(() => {
+        return <>
+            <Input
+                tabIndex={-1}
+                wrapperClassName="d-none"
+                id={id}
+                name={name}
+                value={value}
+                onChange={(e: any) => {
+                    saveFunc?.();
+                }}
+            />
+
+        </>
+
+
+    }, [value]);
+}
+
 
 
 const EditPanel = (props: any) => {
