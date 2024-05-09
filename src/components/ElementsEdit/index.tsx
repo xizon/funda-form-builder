@@ -77,8 +77,13 @@ const ElementsEdit = (props: any) => {
 
     // get current element data
     const __ELEM_ID = elementsData.data?.id;
-    const __ELEM_FIELDS = elementsData.data?.fields;
+    let __ELEM_FIELDS = elementsData.data?.fields;
     const __ELEM_SECTION = elementsData.data?.section;
+
+
+    // Make sure there is an unexpected solution after dragging
+    if (typeof __ELEM_FIELDS === 'undefined') __ELEM_FIELDS = [];
+
 
     const closeAction = () => {
         // edit status
