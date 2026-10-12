@@ -1,7 +1,7 @@
 
 # Funda Form Builder
 
-A prototype architecture for a form grid generator.
+A prototype architecture for a form-grid generator.
 
 ## How to?
 
@@ -20,7 +20,7 @@ npm start
 ```
 or 
 
-[Online](https://uiux.cc/funda-form-builder/build/index.html)
+[Preview Online](https://xizon.github.io/funda-form-builder/build)
 
 ## Licensing
 
