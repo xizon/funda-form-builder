@@ -36,7 +36,7 @@ const ControlRadio = (props: any) => {
                         "B":"B",
                         "AB":"AB",
                         "O":"O",
-                        "${t('未知')}":""
+                        "${t('Unknown')}":""
                     }`}
             />
 

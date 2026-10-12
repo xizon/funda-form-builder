@@ -34,7 +34,7 @@ const EditPanel = (props: any) => {
 
                 <div className="row">
                     <div className="text-end" style={{ width: LABEL_WIDTH }}>
-                        {t('参数1')}
+                        {t('Parameter 1')}
                     </div>
                     <div className="col">
                         <Input
@@ -50,7 +50,7 @@ const EditPanel = (props: any) => {
 
                 <div className="row">
                     <div className="text-end" style={{ width: LABEL_WIDTH }}>
-                        {t('参数2')}
+                        {t('Parameter 2')}
                     </div>
                     <div className="col">
                         <Input
@@ -67,7 +67,7 @@ const EditPanel = (props: any) => {
 
                 <div className="row">
                     <div className="text-end" style={{ width: LABEL_WIDTH }}>
-                        {t('参数3')}
+                        {t('Parameter 3')}
                     </div>
                     <div className="col">
                         <Radio
@@ -75,8 +75,8 @@ const EditPanel = (props: any) => {
                             value={_args.param3}
                             name="app-el-section-param3"
                             options={`{
-                                "${t('选项1')}":"1",
-                                "${t('选项2')}":"2"
+                                "${t('Option 1')}":"1",
+                                "${t('Option 2')}":"2"
                             }`}
                             onChange={(e: any) => {
                                 autoSaveFunc();
@@ -89,7 +89,7 @@ const EditPanel = (props: any) => {
 
 
                 {asyncSaveTriggerForSection()}
-                {asyncSaveTriggerHandle(t('保存'), '', closeFunc)}
+                {asyncSaveTriggerHandle(t('Save'), '', closeFunc)}
 
             </div>
         </div>

@@ -2,7 +2,7 @@ import i18next from '../lang/i18n';
 
 const data = [
     {
-        "tempName": i18next.t('默认模板1'),
+        "tempName": i18next.t('Default template 1'),
         "data": [
             {
                 "ratio": [[12, "col-12"]],
@@ -33,13 +33,13 @@ const data = [
                                     "controlType": "form-input",
                                     "args": {
                                         "name": "",
-                                        "title": "标题",
+                                        "title": "Title",
                                         "value": "test"
                                     }
                                 }
                             ],
                             "moduleSlug": "module_default_elem",
-                            "moduleTitle": "数据块（表单1）"
+                            "moduleTitle": "Data block (Form 1)"
                         },
                         {
                             "id": "app-builder-draggable__item-module-r4-F406A71C-A13E-4403-9938-E8C764E4C440",
@@ -48,13 +48,13 @@ const data = [
                                     "controlType": "form-input",
                                     "args": {
                                         "name": "",
-                                        "title": "标题",
+                                        "title": "Title",
                                         "value": "test"
                                     }
                                 }
                             ],
                             "moduleSlug": "module_default_elem",
-                            "moduleTitle": "数据块（表单1）"
+                            "moduleTitle": "Data block (Form 1)"
                         }
                     ],
                     [
@@ -71,15 +71,15 @@ const data = [
                                                     "style": {
                                                         "width": "50px"
                                                     },
-                                                    "content": "编号"
+                                                    "content": "No."
                                                 },
                                                 {
                                                     "type": false,
-                                                    "content": "姓名"
+                                                    "content": "Name"
                                                 },
                                                 {
                                                     "type": false,
-                                                    "content": "住址"
+                                                    "content": "Address"
                                                 }
                                             ],
                                             "fields": [
@@ -90,11 +90,11 @@ const data = [
                                                     },
                                                     {
                                                         "cols": 1,
-                                                        "content": "张三"
+                                                        "content": "John"
                                                     },
                                                     {
                                                         "cols": 1,
-                                                        "content": "厦门市湖里区xxxx 0928号"
+                                                        "content": "0928 xxxx, Huli District, Xiamen"
                                                     }
                                                 ],
                                                 [
@@ -104,7 +104,7 @@ const data = [
                                                     },
                                                     {
                                                         "cols": 1,
-                                                        "content": "李四"
+                                                        "content": "Jane"
                                                     },
                                                     {
                                                         "cols": 1,
@@ -119,7 +119,7 @@ const data = [
                                 }
                             ],
                             "moduleSlug": "module_default_elem3",
-                            "moduleTitle": "数据块（表格内容）"
+                            "moduleTitle": "Data block (Table)"
                         }
                     ]
                 ]
@@ -156,7 +156,7 @@ const data = [
                                 }
                             ],
                             "moduleSlug": "module_default_elem2",
-                            "moduleTitle": "数据块（表单2）"
+                            "moduleTitle": "Data block (Form 2)"
                         }
                     ],
                     null
@@ -165,7 +165,7 @@ const data = [
         ]
     },
     {
-        "tempName": i18next.t('默认模板2'),
+        "tempName": i18next.t('Default template 2'),
         "data": [
             {
                 "ratio": [
@@ -197,7 +197,7 @@ const data = [
                                 }
                             ],
                             "moduleSlug": "module_default_elem",
-                            "moduleTitle": "数据块（表单1）"
+                            "moduleTitle": "Data block (Form 1)"
                         }
                     ]
                 ]
@@ -232,7 +232,7 @@ const data = [
                                 }
                             ],
                             "moduleSlug": "module_default_elem",
-                            "moduleTitle": "数据块（表单1）"
+                            "moduleTitle": "Data block (Form 1)"
                         }
                     ]
                 ]

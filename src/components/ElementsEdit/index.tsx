@@ -237,8 +237,8 @@ const ElementsEdit = (props: any) => {
                                     { id: `app-elementsedit-btn-save${_fieldIndex}` }
                                 ]}
                                 lang={{
-                                    success: t('操作成功！'),
-                                    empty: t('不能为空。')
+                                    success: t('Operation successful!'),
+                                    empty: t('Cannot be empty.')
                                 }}
                                 rmSpecialCharactersField={[]}
                                 onSubmit={async (currentBtnId: string, formdata: any, success: boolean, incomingData: any) => {
@@ -288,8 +288,8 @@ const ElementsEdit = (props: any) => {
                                 { id: `app-elementsedit-btn-save-section` }
                             ]}
                             lang={{
-                                success: t('操作成功！'),
-                                empty: t('不能为空。')
+                                success: t('Operation successful!'),
+                                empty: t('Cannot be empty.')
                             }}
                             rmSpecialCharactersField={[]}
                             onSubmit={async (currentBtnId: string, formdata: any, success: boolean, incomingData: any) => {

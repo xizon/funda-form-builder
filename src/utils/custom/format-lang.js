@@ -10,7 +10,7 @@ function formatLangStringForOptions(odata, i18n) {
     const data = typeof odata === 'string' ? JSON.parse(odata) : odata;
     const langName = localStorage.getItem('SITE_LANG');
     if (langName !== null) {
-        const trans = i18n.store.data[`${langName === null ? 'zh' : langName}`]?.translation;
+        const trans = i18n.store.data[`${langName === null ? 'en' : langName}`]?.translation;
         if ( typeof trans !== 'undefined' ) {
 
             // if is array

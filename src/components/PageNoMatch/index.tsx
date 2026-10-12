@@ -21,13 +21,13 @@ const PageNoMatch = (props: any) => {
                     </defs>
                 </svg>
 
-                {t('由于您操作过快导致页面匹配错误')}，
+                {t('Page mismatch due to too many rapid actions')},
                 <NavLink
                     data-err-btn="true"
                     tabIndex={-1}
                     to={`/`}
                 >
-                    {t('重新加载')}
+                    {t('Reload')}
                 </NavLink>
             </p>
         </>

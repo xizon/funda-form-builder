@@ -8,7 +8,7 @@ Example:
         <div>
             <input type="text" name="name1" />
             <input type="text" name="name2" />
-            <input type="text" name="name3" required data-required-title={t('字段3')} /> 
+            <input type="text" name="name3" required data-required-title={t('Field 3')} /> 
             <button tabIndex={-1} type="button" id="app-btn-delete">Delete</button>
             <button tabIndex={-1} type="submit" id="app-btn-save" className="btn btn-primary">Save</button>
         </div>
@@ -21,8 +21,8 @@ Example:
         { id: 'app-btn-save' }
     ]}
     lang={{
-        success: t('操作成功！'),
-        empty: t('不能为空。')
+        success: t('Operation successful!'),
+        empty: t('Cannot be empty.')
     }}
     rmSpecialCharactersField={[
         'name1'
@@ -31,7 +31,7 @@ Example:
         {
             fieldName: 'name3',
             reg: /^\s*$/, // is blank
-            errorMessage: t('字段3') + t('不能为空。')
+            errorMessage: t('Field 3') + t('Cannot be empty.')
         }
     ]}
     onSubmit={async (currentBtnId: string, formdata: any, success: boolean, incomingData: any ) => {
@@ -66,11 +66,11 @@ Example:
 
 <FormContainer.OptBtn
     lang={{
-        label: t('删除'),
-        confirm: t('确认'),
-        cancel: t('取消'),
-        tip: t('确定删除?'),
-        ok: t('删除成功!')
+        label: t('Delete'),
+        confirm: t('Confirm'),
+        cancel: t('Cancel'),
+        tip: t('Delete this item?'),
+        ok: t('Deleted successfully!')
     }}
     className="btn btn-danger btn-sm"
     icon={<><i className="fa-regular fa-trash-can"></i></>}

@@ -8,7 +8,7 @@ const sessionExpiresAction = (data) => {
     if ( data.toString() === 'Error' ) {
         
         // Core Communication
-        io('BRIDGE_ALERT', {process: 1, modal: 1, info: '登录状态已过期，或服务出现错误无法执行数据库方法，请重新登录或联系管理员。 <br /><a href="#" id="app-err-server-back" class="btn btn-primary btn-sm mt-2">重新登录</a>'});
+        io('BRIDGE_ALERT', {process: 1, modal: 1, info: 'Session expired, or a server error prevented the database operation. Please sign in again or contact the administrator. <br /><a href="#" id="app-err-server-back" class="btn btn-primary btn-sm mt-2">Sign in again</a>'});
     }
 }
 

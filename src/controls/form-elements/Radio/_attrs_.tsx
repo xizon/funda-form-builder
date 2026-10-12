@@ -59,7 +59,7 @@ const EditPanel = (props: any) => {
 
                 <div className="row">
                     <div className="text-end" style={{ width: LABEL_WIDTH }}>
-                        {t('标题')}
+                        {t('Title')}
                     </div>
                     <div className="col">
                         <Input
@@ -75,7 +75,7 @@ const EditPanel = (props: any) => {
 
                 <div className="row">
                     <div className="text-end" style={{ width: LABEL_WIDTH }}>
-                        {t('控件名(英文)')}
+                        {t('Control name (English)')}
                     </div>
                     <div className="col">
                         <Input
@@ -93,7 +93,7 @@ const EditPanel = (props: any) => {
 
                 <div className="row">
                     <div className="text-end" style={{ width: LABEL_WIDTH }}>
-                        {t('默认值')}
+                        {t('Default value')}
                     </div>
                     <div className="col">
                         <Radio
@@ -105,7 +105,7 @@ const EditPanel = (props: any) => {
                                 "B":"B",
                                 "AB":"AB",
                                 "O":"O",
-                                "${t('未知')}":""
+                                "${t('Unknown')}":""
                             }`}
                             onChange={(e: any) => {
                                 autoSaveFunc();
@@ -119,7 +119,7 @@ const EditPanel = (props: any) => {
 
 
                 {asyncSaveTriggerForFields(fieldIndex)}
-                {asyncSaveTriggerHandle(t('保存'), '', closeFunc)}
+                {asyncSaveTriggerHandle(t('Save'), '', closeFunc)}
 
             </div>
         </div>

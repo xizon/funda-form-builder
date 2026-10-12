@@ -73,7 +73,7 @@ const Homepage = (props: HomepageProps) => {
                     <nav className="navbar navbar-expand-lg text-white app-builder-header">
                         <div className="container-fluid">
                             {/*----------- BEGIN  Brand   ---------*/}
-                            <Brand title={t('表单构建器')} />
+                            <Brand title={t('Form Builder')} />
                             {/*----------- END Brand   ---------*/}
 
 

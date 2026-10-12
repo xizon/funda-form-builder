@@ -144,7 +144,7 @@ const EditPanel = (props: any) => {
 
                 <div className="row">
                     <div className="text-end" style={{ width: LABEL_WIDTH }}>
-                        {t('标题')}
+                        {t('Title')}
                     </div>
                     <div className="col">
                         <Input
@@ -160,7 +160,7 @@ const EditPanel = (props: any) => {
 
                 <div className="row">
                     <div className="text-end" style={{ width: LABEL_WIDTH }}>
-                        {t('模式')}
+                        {t('Mode')}
                     </div>
                     <div className="col">
                         <Radio
@@ -168,8 +168,8 @@ const EditPanel = (props: any) => {
                             value={_args.styles}
                             name="app-el-styles"
                             options={`{
-                                "${t('暗黑模式')}":"dark",
-                                "${t('默认')}":"light"
+                                "${t('Dark mode')}":"dark",
+                                "${t('Default')}":"light"
                             }`}
                             onChange={(e: any) => {
                                 autoSaveFunc();
@@ -185,15 +185,15 @@ const EditPanel = (props: any) => {
 
                 <div className="row">
                     <div className="text-end" style={{ width: LABEL_WIDTH }}>
-                        {t('列表项')}
+                        {t('List items')}
                     </div>
                     <div className="col">
                         <DynamicFields
                             key={JSON.stringify(dynamicFieldsJsonValue)} // Trigger child component update when prop of parent changes
                             data={dynamicFieldsValue}
                             maxFields="15"
-                            confirmText={t('确定此操作?')}
-                            iconAdd={<><span className="d-inline-block pt-2 btn btn-outline-success btn-sm mt-2"><svg width="20px" height="20px" viewBox="0 0 24 28" fill="none"><path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16 12.75H12.75V16C12.75 16.41 12.41 16.75 12 16.75C11.59 16.75 11.25 16.41 11.25 16V12.75H8C7.59 12.75 7.25 12.41 7.25 12C7.25 11.59 7.59 11.25 8 11.25H11.25V8C11.25 7.59 11.59 7.25 12 7.25C12.41 7.25 12.75 7.59 12.75 8V11.25H16C16.41 11.25 16.75 11.59 16.75 12C16.75 12.41 16.41 12.75 16 12.75Z" fill="#146c43" /></svg> {t('添加')}</span></>}
+                            confirmText={t('Confirm this action?')}
+                            iconAdd={<><span className="d-inline-block pt-2 btn btn-outline-success btn-sm mt-2"><svg width="20px" height="20px" viewBox="0 0 24 28" fill="none"><path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16 12.75H12.75V16C12.75 16.41 12.41 16.75 12 16.75C11.59 16.75 11.25 16.41 11.25 16V12.75H8C7.59 12.75 7.25 12.41 7.25 12C7.25 11.59 7.59 11.25 8 11.25H11.25V8C11.25 7.59 11.59 7.25 12 7.25C12.41 7.25 12.75 7.59 12.75 8V11.25H16C16.41 11.25 16.75 11.59 16.75 12C16.75 12.41 16.41 12.75 16 12.75Z" fill="#146c43" /></svg> {t('Add')}</span></>}
                             iconRemove={<><div className="position-absolute top-0 end-0 mt-2 mx-2"><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"><path fillRule="evenodd" clipRule="evenodd" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10ZM8 11a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2H8Z" fill="#f00" /></svg></div></>}
 
                             innerAppendClassName="app-div-table d-table w-100"
@@ -202,8 +202,8 @@ const EditPanel = (props: any) => {
                             innerAppendHideClassName="d-none"
                             innerAppendBodyClassName="app-div-table__body"
                             innerAppendHeadData={[
-                                <>{t('姓名')}</>,
-                                <>{t('住址')}</>,
+                                <>{t('Name')}</>,
+                                <>{t('Address')}</>,
                                 <>&nbsp;</>
                             ]}
                             innerAppendHeadRowClassName="d-table-row fw-bold bg-light"
@@ -223,7 +223,7 @@ const EditPanel = (props: any) => {
 
 
                 {asyncSaveTriggerForFields(fieldIndex)}
-                {asyncSaveTriggerHandle(t('保存'), '', closeFunc)}
+                {asyncSaveTriggerHandle(t('Save'), '', closeFunc)}
 
             </div>
         </div>
@@ -261,16 +261,16 @@ export default ({ ...rest }) => {
                 title: hasFormData ? formdata['app-el-title'] : '',
                 inputData: hasFormData ? {
                     "headers": [
-                        { "type": false, "style": { width: '50px' }, "content": t('编号') },
-                        { "type": false, "content": t('姓名') },
-                        { "type": false, "content": t('住址') }
+                        { "type": false, "style": { width: '50px' }, "content": t('No.') },
+                        { "type": false, "content": t('Name') },
+                        { "type": false, "content": t('Address') }
                     ],
                     "fields": _fieldsData
                 } : {
                     "headers": [
-                        { "type": false, "style": { width: '50px' }, "content": t('编号') },
-                        { "type": false, "content": t('姓名') },
-                        { "type": false, "content": t('住址') }
+                        { "type": false, "style": { width: '50px' }, "content": t('No.') },
+                        { "type": false, "content": t('Name') },
+                        { "type": false, "content": t('Address') }
                     ],
                     "fields": []
                 },
